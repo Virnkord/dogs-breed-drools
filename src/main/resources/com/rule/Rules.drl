@@ -1,0 +1,158 @@
+package com.rule
+
+import com.virnkord.model.Dog
+
+rule "английский бульдог"
+	when 
+		dog: Dog(hair == "короткошерстная",
+					height < 50,
+					height != 0,
+					tail == "короткий")
+	then
+		dog.setBreed("английский бульдог");
+	end
+rule "гончая"
+	when 
+		dog: Dog(hair=="короткошерстная",
+					height < 50,
+					height != 0,
+					tail == "длинный",
+					ears == "длинные")
+	then
+		dog.setBreed("гончая");
+	end
+	
+rule "мопс"
+	when 
+		dog: Dog(hair=="короткошерстная",
+					height < 50,
+					height != 0,
+					tail == "длинный",
+					ears == "короткие",
+					body == "короткое")
+	then
+		dog.setBreed("мопс");
+	end
+	
+rule "чихуахуа"
+	when 
+		dog: Dog(hair=="короткошерстная",
+					height < 50,
+					height != 0,
+					tail == "длинный",
+					ears == "короткие",
+					body == "длинное")
+	then
+		dog.setBreed("чихуахуа");
+	end
+	
+rule "датский дог"
+	when 
+		dog: Dog(hair=="короткошерстная",
+					height > 50,
+					weight > 50)
+	then
+		dog.setBreed("датский дог");
+	end
+	
+rule "фоксхаунд"
+	when 
+		dog: Dog(hair=="короткошерстная",
+					height > 50,
+					weight < 50)
+	then
+		dog.setBreed("фоксхаунд");
+	end
+	
+rule "кокер-спаниель"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height < 50,
+					height != 0,
+					character == "доброжелательный")
+	then
+		dog.setBreed("кокер-спаниель");
+	end
+	
+rule "ирландский сеттер"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height < 50,
+					height != 0,
+					character == "недоброжелательный")
+	then
+		dog.setBreed("ирландский сеттер");
+	end
+	
+rule "большой вандейский грифон"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height > 50,
+					height < 70,
+					ears == "длинные")
+	then
+		dog.setBreed("большой вандейский грифон");
+	end
+	
+rule "колли"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height > 50,
+					height < 70,
+					ears == "короткие")
+	then
+		dog.setBreed("колли");
+	end
+	
+rule "сенбернар"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height > 50,
+					height > 70,
+					color == "рыжий",
+					marks == "белые")
+	then
+		dog.setBreed("сенбернар");
+	end
+	
+rule "ирландский волкодав"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height > 50,
+					height > 70,
+					color == "белоснежный")
+	then
+		dog.setBreed("ирландский волкодав");
+	end
+	
+rule "ньюфаундленд"
+	when 
+		dog: Dog(hair=="длинношерстная",
+					height > 50,
+					height > 70,
+					color != "белоснежный",
+					color != "рыжий")
+	then
+		dog.setBreed("ньюфаундленд");
+	end
+	/*
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
